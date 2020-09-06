@@ -1,0 +1,11 @@
+cd ..
+mkdir build
+cd build
+cmake ..
+make
+fileList=`ls Assets/Instances`
+for instanceName in $fileList
+do
+    echo "\nInstance $instanceName :\n"
+    ./RoadefGoogleChallenge check Assets/Instances/$instanceName Assets/Solutions/$instanceName Assets/Solutions/$instanceName
+done
